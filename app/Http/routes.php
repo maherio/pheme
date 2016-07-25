@@ -23,7 +23,14 @@ Route::get('/home', 'HomeController@index');
 Route::get('twitter/login', [
     'uses' => 'TwitterController@loginWithTwitter',
     'as' => 'twitter.login',
-]);Route::get('twitter/callback', [
+]);
+Route::get('twitter/callback', [
     'uses' => 'TwitterController@loginCallback',
     'as' => 'twitter.callback',
+]);
+
+//yahoo routes
+Route::get('yahoo/login', [
+    'uses' => 'YahooController@loginWithYahoo',
+    'as' => 'yahoo.login',
 ]);

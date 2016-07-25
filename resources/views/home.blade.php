@@ -8,12 +8,23 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
-                    @if (isset($twitter_connected))
-                        <div>Connected with Twitter</div>
-                        <a href="{{ route('twitter.login') }}" class="btn btn-default">Force Reconnect with Twitter</a>
-                    @else
-                        <a href="{{ route('twitter.login') }}" class="btn btn-default">Connect Twitter</a>
-                    @endif
+                    <div class='twitter_connection'>
+                        @if (isset($twitter_connected))
+                            <div>Connected with Twitter</div>
+                            <a href="{{ route('twitter.login') }}" class="btn btn-default">Force Reconnect with Twitter</a>
+                        @else
+                            <a href="{{ route('twitter.login') }}" class="btn btn-default">Connect Twitter</a>
+                        @endif
+                    </div>
+
+                    <div class='yahoo_connection'>
+                        @if (isset($yahoo_connected))
+                            <div>Connected with Yahoo</div>
+                            <a href="{{ route('yahoo.login') }}" class="btn btn-default">Force Reconnect with Yahoo</a>
+                        @else
+                            <a href="{{ route('yahoo.login') }}" class="btn btn-default">Connect Yahoo</a>
+                        @endif
+                    </div>
 
                     <div class='tweets'>
                         @foreach ($tweets as $tweet)
