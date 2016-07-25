@@ -18,3 +18,12 @@ Route::get('/', function () {
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+
+//twitter routes
+Route::get('twitter/login', [
+    'uses' => 'TwitterController@loginWithTwitter',
+    'as' => 'twitter.login',
+]);Route::get('twitter/callback', [
+    'uses' => 'TwitterController@loginCallback',
+    'as' => 'twitter.callback',
+]);
