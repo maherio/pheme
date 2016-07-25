@@ -38,7 +38,7 @@ with yahoo so left the search terms stubbed out for the twitter feed integration
 - Assuming I actually did finish this, here's how I would approach making this a production-quality service:
  - Throw this project out. I wouldn't want to fall into the trap of continuing to build on MVPs because some of the work
  is already done.
- - Implement unit testing.
+ - Implement unit testing as well as continuous integration.
  - Use caching to improve performance. I would also use it to avoid potential rate limiting issues with the service APIs
  which I'm sure I would run into with more users or even just a larger feed.
  - Encapsulate more of the dependent logic. For example, I'm not a huge fan of all that logic being in the Twitter and
