@@ -96,7 +96,7 @@ class TwitterController extends Controller
                 // This is also the moment to log in your users if you're using Laravel's Auth class
                 // Auth::login($user) should do the trick.
 
-                Session::put(Config::get('constants.twitter_access_token'), $token);
+                Session::put(Config::get('constants.TWITTER_ACCESS_TOKEN'), $token);
 
                 return Redirect::to('/home')->with('flash_notice', 'Congrats! You\'ve successfully signed in!');
             }

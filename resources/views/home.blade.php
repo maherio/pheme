@@ -27,9 +27,11 @@
                     </div>
 
                     <div class='tweets'>
-                        @foreach ($tweets as $tweet)
-                            {!! $tweet->html !!}
-                        @endforeach
+                        @if (isset($tweets))
+                            @foreach ($tweets as $tweet)
+                                {!! $tweet->html !!}
+                            @endforeach
+                        @endif
                     </div>
 
                     @if (isset($error))
